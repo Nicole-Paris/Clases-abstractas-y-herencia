@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patrón Prototype - Dashboard Realista</title>
+    <script type="module" src="/src/main.ts"></script>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f0f2f5;
+        padding: 2rem;
+      }
+      h1 {
+        text-align: center;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #007bff;
+        color: white;
+        transition: 0.2s;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .dashboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+      .widget {
+        background: white;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      canvas {
+        width: 100% !important;
+        height: 200px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🧠 Patrón Prototype - Dashboard Realista</h1>
+    <div class="actions">
+      <button id="btnWithout">❌ Crear sin Prototype</button>
+      <button id="btnWith">✅ Crear con Prototype</button>
+    </div>
+    <div id="dashboard" class="dashboard"></div>
+  </body>
+</html>
